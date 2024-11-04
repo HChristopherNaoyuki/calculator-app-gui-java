@@ -64,7 +64,7 @@ public class Calculator extends JFrame implements ActionListener
         subtractButton = createButton("-", new Color(0, 150, 0));
         multiplyButton = createButton("X", new Color(0, 150, 0));
         divideButton = createButton("÷", new Color(0, 150, 0)); // Change to ÷ for clarity
-        decimalButton = createButton(",", new Color(0, 100, 200));
+        decimalButton = createButton(".", new Color(0, 100, 200)); // Change to dot for decimal
         equalButton = createButton("=", new Color(0, 200, 0));
         factorialButton = createButton("!", new Color(200, 0, 200));
         ansButton = createButton("ANS", new Color(200, 0, 200));
@@ -88,7 +88,7 @@ public class Calculator extends JFrame implements ActionListener
         buttonPanel.add(addButton);
         buttonPanel.add(subtractButton);
 
-        buttonPanel.add(decimalButton); // Changed to use the comma as the decimal button
+        buttonPanel.add(decimalButton); // Use dot as the decimal button
         buttonPanel.add(numberButtons[0]);
         buttonPanel.add(factorialButton);
         buttonPanel.add(ansButton);
@@ -124,9 +124,9 @@ public class Calculator extends JFrame implements ActionListener
 
             if (e.getSource() == decimalButton)
             {
-                if (!display.getText().contains(",")) // Use comma for decimal
+                if (!display.getText().contains(".")) // Use dot for decimal
                 {
-                    display.setText(display.getText().concat(","));
+                    display.setText(display.getText().concat("."));
                 }
             }
 

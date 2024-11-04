@@ -5,13 +5,25 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * AUTHOR: Naoyuki Christopher H.
+ * GITHUB: https://github.com/HChristopherNaoyuki
+ */
+
 public class Calculator extends JFrame implements ActionListener
 {
-    private JTextField display;
-    private JButton[] numberButtons;
-    private JButton addButton, subtractButton, multiplyButton, divideButton;
-    private JButton decimalButton, equalButton, clearButton, deleteButton;
-    private JButton factorialButton, ansButton;
+    private final JTextField display;
+    private final JButton[] numberButtons;
+    private final JButton addButton;
+    private final JButton subtractButton;
+    private final JButton multiplyButton;
+    private final JButton divideButton;
+    private final JButton decimalButton;
+    private final JButton equalButton;
+    private final JButton clearButton;
+    private final JButton deleteButton;
+    private final JButton factorialButton;
+    private final JButton ansButton;
 
     private double num1 = 0, num2 = 0, result = 0;
     private char operator;
@@ -19,7 +31,7 @@ public class Calculator extends JFrame implements ActionListener
 
     public Calculator()
     {
-        setTitle("Casio FX-82ZA Plus II Emulator");
+        setTitle("Github: HChristopherNaoyuki");
         setSize(400, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());

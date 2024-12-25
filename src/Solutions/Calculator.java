@@ -63,13 +63,12 @@ public class Calculator extends JFrame implements ActionListener
         addButton = createButton("+", new Color(0, 150, 0));
         subtractButton = createButton("-", new Color(0, 150, 0));
         multiplyButton = createButton("X", new Color(0, 150, 0));
-        divideButton = createButton("÷", new Color(0, 150, 0)); // Change to ÷ for clarity
-        decimalButton = createButton(".", new Color(0, 100, 200)); // Change to dot for decimal
+        divideButton = createButton("÷", new Color(0, 150, 0));
+        decimalButton = createButton(".", new Color(0, 100, 200));
         equalButton = createButton("=", new Color(0, 200, 0));
         factorialButton = createButton("!", new Color(200, 0, 200));
         ansButton = createButton("ANS", new Color(200, 0, 200));
 
-        // Arrange buttons in the specified order
         buttonPanel.add(numberButtons[7]);
         buttonPanel.add(numberButtons[8]);
         buttonPanel.add(numberButtons[9]);
@@ -88,7 +87,7 @@ public class Calculator extends JFrame implements ActionListener
         buttonPanel.add(addButton);
         buttonPanel.add(subtractButton);
 
-        buttonPanel.add(decimalButton); // Use dot as the decimal button
+        buttonPanel.add(decimalButton);
         buttonPanel.add(numberButtons[0]);
         buttonPanel.add(factorialButton);
         buttonPanel.add(ansButton);
@@ -124,7 +123,7 @@ public class Calculator extends JFrame implements ActionListener
 
             if (e.getSource() == decimalButton)
             {
-                if (!display.getText().contains(".")) // Use dot for decimal
+                if (!display.getText().contains("."))
                 {
                     display.setText(display.getText().concat("."));
                 }
